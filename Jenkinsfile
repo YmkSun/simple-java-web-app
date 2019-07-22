@@ -11,10 +11,5 @@ pipeline {
                 bat 'mvn install'
             }
         }
-		stage('Deliver') {
-			steps {
-				bat 'scp -p /target/simple-java-web-app-0.0.1-SNAPSHOT.war c/workspace/temp'
-			}
-		}
     }
 }
