@@ -13,8 +13,7 @@ pipeline {
         }
 		stage('Deliver') {
 			steps {
-				bat 'scp -p /target/simple-java-web-app-0.0.1-SNAPSHOT.war yemyokyaw@192.168.1.88:c/workspace/temp'
-				cp '/target/simple-java-web-app-0.0.1-SNAPSHOT.war c/workspace/temp'
+				bat 'scp -p /target/simple-java-web-app-0.0.1-SNAPSHOT.war yemyokyaw@192.168.1.88:8080'
 			}
 		}
     }
