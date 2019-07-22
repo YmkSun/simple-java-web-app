@@ -13,7 +13,7 @@ pipeline {
         }
 		stage('Deliver') {
 			steps {
-				bat 'cp -Rp /target/simple-java-web-app-0.0.1-SNAPSHOT.war C:/workspace/temp'
+				bat 'cp -Rp /target/simple-java-web-app-0.0.1-SNAPSHOT.war C/workspace/temp'
 			}
 		}
     }
