@@ -13,9 +13,7 @@ pipeline {
         }
 		stage('Deploy') {
             steps {
-                bat 'copy C:\\Windows\\System32\\config\\systemprofile\\.jenkins\\workspace\\jenkins-multiple-test\\simple-java-web-app\\target\\simple-java-web-app-0.0.1-SNAPSHOT.war C:\\workspace\\temp'
-				
-				bat 'scp target/simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.0.207:/home/azlabs/test-jenkins-deploy'
+				bat 'pwd'
             }
         }
     }
