@@ -1,14 +1,19 @@
 pipeline { 
     agent any
     stages {
+		stage('Clean') {
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
         stage('Build') {
             steps {
-                sh 'mvn -e install'
+                bat 'mvn -e install'
             }
         }
 		stage('Deploy') {
             steps {
-				sh 'pwd'
+				bat 'pwd'
             }
         }
     }
