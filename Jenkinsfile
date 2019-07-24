@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                bat 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
         stage('Build') {
             steps {
-                bat 'mvn install'
+                sh 'mvn install'
             }
         }
 		stage('Deploy') {
             steps {
-				bat 'pwd'
+				sh 'pwd'
             }
         }
     }
