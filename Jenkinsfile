@@ -13,7 +13,7 @@ pipeline {
         }
 		stage('Deploy') {
             steps {
-				bat 'copy C:\\Windows\\System32\\config\\systemprofile\\.jenkins\\workspace\\jenkins-multiple-test\\simple-java-web-app\\target\\simple-java-web-app-0.0.1-SNAPSHOT.war C:\\workspace\\temp'
+				bat 'ssh azlabs@192.168.1.176'
 				bat 'C:\\Windows\\System32\\config\\systemprofile\\.jenkins\\workspace\\jenkins-multiple-test\\simple-java-web-app\\jenkins\\deploy.bat'
             }
         }
