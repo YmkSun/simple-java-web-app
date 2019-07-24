@@ -1,0 +1,1 @@
+scp C:\Windows\System32\config\systemprofile\.jenkins\workspace\jenkins-multiple-test\simple-java-web-app\target\simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.1.176:/home/azlabs/jtest-tmp
