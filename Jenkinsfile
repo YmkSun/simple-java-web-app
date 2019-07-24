@@ -3,17 +3,18 @@ pipeline {
     stages {
 		stage('Clean') {
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                bat 'mvn -B -DskipTests clean package' 
             }
         }
         stage('Build') {
             steps {
-                bat 'mvn -e install'
+                bat 'mvn install'
             }
         }
 		stage('Deploy') {
             steps {
-				bat 'pwd'
+				bat 'copy C:\\Windows\\System32\\config\\systemprofile\\.jenkins\\workspace\\jenkins-multiple-test\\simple-java-web-app\\target\\simple-java-web-app-0.0.1-SNAPSHOT.war C:\\workspace\\temp'
+				bat 'scp target/simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.0.207:/home/azlabs/test-jenkins-deploy'
             }
         }
     }
