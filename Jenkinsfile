@@ -3,18 +3,13 @@ pipeline {
     stages {
 		stage('Clean') {
             steps {
-                bat 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
         stage('Build') {
             steps {
-                bat 'mvn install'
+                sh 'mvn install'
             }
         }
-		stage('Deploy') {
-			steps {
-				bat 'scp -i C:/Windows/System32/config/systemprofile/.ssh/id_rsa target/simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.1.176:/home/azlabs/jtest-tmp'
-			}
-		}
     }
 }
