@@ -13,7 +13,7 @@ pipeline {
         }
 		stage('Deploy') {
 			steps {
-				bat 'scp -i C:/Users/"Ye Myo Kyaw"/.ssh/id_rsa C:/Windows/System32/config/systemprofile/.jenkins/workspace/simple-multi-pipeline/simple-java-web-app/target/simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.1.176:/home/azlabs/jtest-tmp'
+				bat 'pscp -i C:/Users/"Ye Myo Kyaw"/.ssh/id_rsa C:/Windows/System32/config/systemprofile/.jenkins/workspace/simple-multi-pipeline/simple-java-web-app/target/simple-java-web-app-0.0.1-SNAPSHOT.war azlabs@192.168.1.176:/home/azlabs/jtest-tmp'
 			}
 		}
     }
